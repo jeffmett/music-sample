@@ -1,0 +1,41 @@
+aj-form {
+  display: block;
+}
+
+aj-form [type=password] .viz-toggle {
+  position: absolute;
+  top: 0.5em;
+  right: 0;
+  font-size: 1.25em;
+  cursor: pointer;
+  color: #888;
+}
+
+aj-form [type=password]:not(.visible) .input {
+  font-family: password;
+  font-size: 11px;
+  letter-spacing: -1.5px;
+}
+
+/* chucking here for now */
+aj-input, aj-submit {
+  margin: 0 auto 1em;
+}
+aj-submit {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-size: 1.25em;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 3px;
+  background: linear-gradient(#1074e7, #1178f0, #1074e7);
+  color: #fafafa;
+  border: 1px solid #0b4e9b;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+aj-submit:hover {
+  box-shadow: 0 0 5px #0d5bb4 inset;
+}

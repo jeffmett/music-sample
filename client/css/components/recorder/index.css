@@ -1,0 +1,37 @@
+@import './metronome.css';
+@import './countdown.css';
+
+.recorder .picker {
+  position: relative;
+  border-radius: 5px;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 100%;
+  padding: 0.25em;
+  cursor: default;
+}
+.recorder .picker .btn {
+  width: 100%;
+}
+.recorder .picker i {
+  font-size: 2.5em;
+}
+
+.recorder canvas {
+  height: 50px;
+  width: 100%;
+}
+
+.record.btn {
+  background: #ffe6e1;
+  color: #400;
+}
+.record.btn:before {
+  color: #900;
+}
+.recording .record.btn:before {
+  color: #d00;
+}

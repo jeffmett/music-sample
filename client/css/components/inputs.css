@@ -1,0 +1,11 @@
+input.editable {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  transition: 0.2s border-color;
+}
+input.editable:hover {
+  border-color: currentColor;
+}
+input[type=number].editable {
+  width: 75px;
+}

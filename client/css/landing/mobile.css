@@ -1,0 +1,22 @@
+@media (orientation: portrait) {
+
+  #main-sect > .flex {
+    flex-direction: column;
+  }
+
+  #project-info-container {
+    min-height: calc(100vh - 65px);
+    margin-top: -65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #main-sect > .flex > div {
+    width: 100%;
+  }
+}
+
+@media (orientation: landscape) {
+
+}

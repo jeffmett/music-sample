@@ -1,0 +1,53 @@
+@font-face {
+  font-family: icon;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/icons.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: password;
+  src: url("../assets/password.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: g;
+  src: url("../assets/g.woff2") format("woff2");
+}
+
+.icon, [icon]:before {
+  font-family: icon !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align: middle;
+}
+
+[icon]:before {
+  content: attr(icon);
+}
+
+[icon]:not(:empty):before {
+  margin-left: -0.25em;
+  margin-right: 0.25em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 100 1em g, sans-serif;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0.4px;
+}

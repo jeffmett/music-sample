@@ -1,0 +1,10 @@
+@import './keyboard.css';
+
+#midi-container {
+  position: relative;
+  width: 100%;
+}
+
+/* todo some pedal styling */
+.midi-container.pedal-on {}
+

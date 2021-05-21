@@ -1,0 +1,229 @@
+.tbl {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1;
+/*   height: 100%; */
+}
+.tbl .row {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  padding: 0.25em;
+  font-size: 0.75em;
+  border-bottom: 1px solid #ddd;
+  letter-spacing: 0.4px;
+  height: 30px;
+  background-size: 100% 100%;
+  border-left: 3px solid transparent;
+}
+/* todo style up, this is for development */
+.tbl .row.active input {
+  color: blue;
+}
+.tbl .row.active {
+  border-left-color: blue;
+}
+.tbl i {
+  font-size: 1.25em;
+}
+.tbl .head {
+  padding-left: 3.25em;
+}
+.tbl .head input {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  text-indent: 3px;
+}
+.tbl .row input:focus {
+  border-color: #555;
+}
+.tbl .head .label {
+  cursor: default;
+}
+
+.tbl .head .arrow:after {
+  font: 1.1em icon;
+  content: 'arrow_drop_down';
+  vertical-align: middle;
+}
+
+.tbl .head .arrow.flipped:after {
+  content: 'arrow_drop_up';
+}
+.tbl .head .hide_arrow:hover:after {
+  opacity: 0.5;
+}
+.tbl .head .hide_arrow:after {
+  opacity: 0;
+}
+
+
+.tbl .body {
+  overflow-y: auto;
+}
+
+input.editable {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  transition: 0.2s;
+  background: radial-gradient(ellipse at 30%, rgba(255,255,255,0.8) 30%, transparent 95%);
+  text-shadow: 0 0 7px #fefefe;
+  /* text-indent: 5px; */
+  font-size: 1.05em;
+  letter-spacing: 0.4px;
+  width: 125px;
+  /* flex: 1; */
+  margin: 0 1.5em 0 1em;
+}
+.row:hover input.editable {
+  background: rgba(255, 255, 255, 0.9);
+  background: radial-gradient(ellipse at 30%, rgba(255,255,255,0.9) 30%, rgba(255,255,255,0.9) 75%, rgba(255,255,255,0.5) 95%);
+  border-color: #f5f5f5;
+}
+.row input.editable:hover {
+  border-color: #ddd;
+  background: #fefefe;
+}
+
+/* tracks row specific */
+.row.metro {
+  justify-content: flex-start;
+}
+.metro i.toggle {
+  color: #080;
+  font-size: 2em;
+  margin-right: 0.5em;
+}
+.metro.off, .metro.off i.toggle {
+  color: var(--dim);
+  opacity: 0.5;
+}
+.metro .vol {
+}
+#tempo-input {
+  margin: 0 1em;
+  margin-left: 0;
+}
+#tempo-input i {
+  font-size: 1.25em;
+  margin: 0 0.125em;
+  transition: .2s;
+  opacity: 0;
+  transition-delay: 0.25s;
+  vertical-align: -3px;
+}
+.metro:hover #tempo-input i {
+  opacity: 1;
+  transition-delay: 0s;
+}
+#tempo-input .val {
+  position: relative;
+  /* top: 2px; */
+  font-size: 1.25em;
+}
+#tempo-input .val:after {
+  position: absolute;
+  bottom: 2px;
+  letter-spacing: 0.75px;
+  content: 'bpm';
+  font-size: 9px;
+  opacity: 1;
+  margin-left: 0.125em;
+  transition: 0.2s;
+  pointer-events: none;
+  transition-delay: 0.25s;
+}
+.metro:hover #tempo-input .val:after {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.tracks.tbl .vol {
+  height: 20px;
+  position: relative;
+  display: flex;
+  /* max-width: 250px; */
+  width: 38.2%;
+  align-items: center;
+  margin-right: 1em;
+}
+.metro.row .vol {
+  left: 0.25em;
+}
+.tracks.tbl .vol .mute-toggle {
+  margin-right: 0.5em;
+}
+.tracks.tbl .vol .slider:after {
+  position: absolute;
+  content: '';
+  top: -1px;
+  right: -15px;
+  height: 100%;
+  border: 1px solid #aaa;
+  width: 15px;
+  border-radius: 7.5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+  pointer-events: none;
+}
+.tracks.tbl .vol .slider {
+  border: 1px solid #aaa;
+  border-right: none;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 15px;
+  position: relative;
+  width: 100%;
+  background-color: rgba(255,255,255,0.75);
+}
+.tracks.tbl .vol canvas {
+  position: absolute;
+  width: 100%;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  height: 100%;
+}
+.tracks.tbl .vol .knob {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  border :1px solid #888;
+  margin-top: -1px;
+  margin-right: -15px;
+  background: rgba(209, 209, 209, 0.5);
+  cursor: grab;
+}
+.tracks.tbl .vol .knob:active {
+  cursor: grabbing;
+}
+
+/* quick hack to show new rows loading */
+/* todo logical selector and glisten */
+.tbl .body .row:not([id]) {
+  opacity: 0.5;
+}
+
+.nix:hover {
+  color: #a00;
+}
+
+/*
+ quick n' dirty force each table to look
+ presentable
+*/
+#songs-table .body .row {}
+
+#songs-table .body .row {}
+
+.tracks.tbl .body .row {}
+
+.tracks.tbl .body .row {}
+
+.pub-toggle:not(.hover-only) {
+  color: green;
+}

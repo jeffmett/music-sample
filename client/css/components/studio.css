@@ -1,0 +1,30 @@
+@import './player/ctrls.css';
+@import './player/scrubber.css';
+
+#studio-container {
+  display: grid;
+  grid-template-columns: 38.2% 61.8%;
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-areas:
+    'player player'
+    'recorder tracks'
+    'mixer tracks';
+}
+#studio-container .player {
+  grid-area: player;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5em 0 1em;
+  height: 115px;
+}
+#studio-container .recorder {
+  grid-area: recorder;
+  border-bottom: 1px solid #ddd;
+  background: var(--bg);
+}
+#studio-container .mixer {
+  grid-area: mixer;
+}
+#studio-container .tracks {
+  grid-area: tracks;
+  border-left: 1px solid #ddd;
+}

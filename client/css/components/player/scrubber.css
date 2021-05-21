@@ -1,0 +1,77 @@
+#scrubber {
+  height: 20px;
+  min-width: 50%;
+  width: 500px;
+  max-width: 100%;
+  border: 1px solid #888;
+  background-size: 100% 100%;
+  /*filter: drop-shadow(0 0 0 #444);*/
+}
+
+.handle {
+  box-sizing: border-box;
+  position: absolute;
+  top: -6px;
+  height: calc(100% + 12px);
+  width: 5px;
+  padding: 2px;
+  border: 1px solid #555;
+  background: transparent;
+  cursor: grab;
+  z-index: 11;
+}
+
+.handle:active {
+  cursor: grabbing;
+}
+
+.handle.left {
+  margin-left: -6px;
+  border-radius: 5px 3px 3px 5px;
+  left: 0;
+}
+
+.handle.right {
+  left: 100%;
+  border-radius: 3px 5px 5px 3px;
+  margin-right: -6px;
+}
+
+.handle:before, .handle:after {
+  position: absolute;
+  left: 100%;
+  border: 4px solid transparent;
+  border-left: 8px solid #555;
+  content: '';
+}
+
+.handle:before {
+  top: 0px;
+  border-bottom: none;
+}
+
+.handle:after {
+  bottom: 0;
+  border-top: none;
+}
+
+.handle.right:before, .handle.right:after {
+  border-right: 8px solid #555;
+  border-left-color: transparent;
+  left: -16px;
+}
+
+#scrubber canvas.progress {
+  width: calc(100% + 2px);
+  height: 100%;
+}
+
+#scrubber .progress-time {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  margin: 0 0.75em;
+}
+#scrubber .progress-time:last-child {
+  left: 100%;
+}

@@ -1,0 +1,6 @@
+.idea/
+.DS_STORE
+node_modules
+app.yaml
+package-lock.json
+client/assets

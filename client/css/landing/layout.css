@@ -1,0 +1,67 @@
+header {
+  height: 70px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+  padding: 0.25em 1em;
+}
+
+#login-btn {
+  margin-left: auto;
+}
+
+main section {
+  border-bottom: 1px solid #ddd;
+}
+
+#main-sect > .flex {
+  position: relative;
+  max-width: 750px;
+  margin: auto;
+  justify-content: space-between;
+  padding: 65px 0;
+}
+
+#project-info-container h1 {
+  font-size: 3.25em;
+  margin-bottom: 0.5em;
+}
+#project-info-container p {
+ font-size: 1.1em;
+}
+
+
+#main-sect > .flex > div {
+  width: 50%;
+  padding: 1em;
+}
+
+.form-container {
+ border: 1px solid #ddd;
+ padding: 1em;
+ border-radius: 5px;
+ background: rgba(255, 255, 255, 0.75);
+}
+.modal .form-container {
+  border-color: transparent;
+}
+
+#disclaimer {
+  font-size: 12px;
+  color: #6a737d;
+}
+
+footer {
+  background: #fafafa;
+  padding: 1.5em;
+  font-size: 0.85em;
+  width: 100vw;
+  border-top: 1px solid #ddd;
+}
+
+#copyright {
+  margin-right: 1em;
+}
+footer a {
+  margin: 0 0.25em;
+  color: #000;
+}

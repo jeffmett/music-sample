@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hallway99</title>
+  <script src="./js/s.js"></script>
+  <script src="./js/vue.js"></script>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE7W1146NY"></script>
+  <!-- analytics and so forth -->
+  <script>
+    // todo wrap this into one script and get it from home base
+    ~function() {
+      if(!location.href.includes('hallway99')) return;
+      // hotjar
+      (function(h, o, t, j, a, r) {
+        h.hj = h.hj || function() {(h.hj.q = h.hj.q || []).push(arguments)};
+        h._hjSettings = {hjid: 1874892, hjsv: 6};
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+
+      // big g
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YE7W1146NY');
+
+      // lucky o
+      window.__lo_site_id = 226190;
+      (function() {
+        var wa = document.createElement('script');
+        wa.type = 'text/javascript';
+        wa.async = true;
+        wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wa, s);
+      })();
+    }();
+  </script>
+</head>
+<body>
+
+<main id="app-root">
+  <section class="flex flex1">
+    <div id="playlist">
+      <header class="pad1">
+        <h1 class="mt0 fw1">Hallway<span style="color:#888">99</span></h1>
+        <span class="green btn" icon="add_circle_outline" @click="create_song">create song</span>
+      </header>
+      <hw_table id="songs-table" :items="playlist" :row_click="switch_song"></hw_table>
+    </div>
+    <div id="studio" class="flex col">
+      <flash></flash>
+      <studio class="flex1" :song="song"></studio>
+    </div>
+  </section>
+
+  <section class="w100">
+    <midi></midi>
+  </section>
+</main>
+
+<script src="./js/index.js" type="module" crossorigin></script>
+</body>
+</html>

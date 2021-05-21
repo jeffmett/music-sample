@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+  <title>HW99 Studio</title>
+  <script src="/js/s.js"></script>
+  <link rel="stylesheet" href="/css/landing.css">
+  <link rel="stylesheet" href="/css/landing/mobile.css"
+        media="screen and (max-device-width: 900px)">
+</head>
+<body>
+
+<div id="container">
+  <header class="flex">
+    <!-- logo - dropdowns - search - sign up/in -->
+    <span id="login-btn" class="pointer">Sign in</span>
+  </header>
+
+  <main>
+    <section id="main-sect">
+      <div class="flex">
+        <div id="project-info-container">
+          <h1>Built for musicians</h1>
+          <p>
+            But only musicians using Google Chrome, so far.  Soon we'll have an app for everyone else to
+            download, until then if you're not using Chrome, go ahead and <a href="https://google.com/chrome" target="_blank">download it here</a>
+          </p>
+        </div>
+
+        <!-- todo mobile only scroll-to-form button -->
+
+        <div class="form-container">
+          <!-- todo social options -->
+
+          <aj-form id="signup_form" class="floaty" action="/signup">
+            <!-- username -->
+            <aj-input name="username">
+            <span
+                class="input"
+                contenteditable="true"
+                spellcheck="false"
+            ></span>
+              <label>Username</label>
+            </aj-input>
+
+            <!-- email -->
+            <aj-input name="email">
+            <span
+                class="input"
+                contenteditable="true"
+                spellcheck="false"
+            ></span>
+              <label>Email</label>
+            </aj-input>
+
+            <!-- password -->
+            <aj-input name="password" type="password">
+            <span
+                class="input"
+                contenteditable="true"
+                spellcheck="false"
+            ></span>
+              <label>Password</label>
+              <i icon="visibility_off" class="viz-toggle"></i>
+            </aj-input>
+
+            <!-- submit -->
+            <aj-submit>Sign Up</aj-submit>
+          </aj-form>
+
+          <p id="disclaimer">
+            By clicking "Sign up", you agree to our
+            <a onclick="alert('be cool')">Terms of Service</a>
+            and
+            <a onclick="alert('we cool')">Privacy Statement.</a>
+            We'll occasionally send you account related emails.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- so on so forth -->
+
+    <!-- placeholder to push footer down -->
+    <div style="height:50vh"></div>
+  </main>
+
+  <footer>
+    <!-- logo, table of links -->
+    <div>
+      <span id="copyright"></span>
+      <a onclick="alert('be cool')">Terms</a>
+      <a onclick="alert('we cool')">Privacy</a>
+    </div>
+  </footer>
+</div>
+
+<div id="login-modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-flash"></div>
+    <i icon="close" class="modal-close"></i>
+
+    <div class="form-container">
+
+      <!-- todo social options -->
+      <aj-form id="login_form" class="floaty" action="/login">
+        <!-- username or email -->
+        <aj-input name="login">
+          <span
+              class="input"
+              contenteditable="true"
+              spellcheck="false"
+          ></span>
+          <label>Username or email address</label>
+        </aj-input>
+
+        <!-- password -->
+        <aj-input name="password" type="password">
+          <span
+              class="input"
+              contenteditable="true"
+              spellcheck="false"
+          ></span>
+          <label>Password</label>
+          <i icon="visibility_off" class="viz-toggle"></i>
+        </aj-input>
+
+        <!-- submit -->
+        <aj-submit>Log In</aj-submit>
+      </aj-form>
+      <!-- new to Hallway 99?  <close modal and focus on signup form>Create an account.</> -->
+    </div>
+  </div>
+</div>
+
+<script src="./js/landing.js"></script>
+</body>
+</html>

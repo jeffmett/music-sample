@@ -1,0 +1,89 @@
+.keyboard {
+  position: relative;
+  height: 85px;
+  display: flex;
+  width: 100%;
+}
+.keyboard .key {
+  position: relative;
+}
+
+.keyboard .key.white {
+  float: left;
+  width: 14.2%;
+  height: 100%;
+  border: 1px solid #626262;
+  border-right: none;
+  position: relative;
+  border-radius: 0 0 2px 2px;
+  background-image: linear-gradient(center bottom, #fff 95%, #ccc 100%);
+  box-shadow: 0 -3px 1px 0px #c4c4c4 inset, 0 -60px 40px 10px #fafafa inset;
+  transition: 0.1s height;
+}
+.keyboard .key.white.pressed {
+  border: 1px solid #343434;
+  /*border-top: 10px solid #4eb4ff;*/
+  /*background-image: linear-gradient(center bottom , #7acdff 90%, #61a7eb 100%);*/
+  box-shadow: 0 -5px 7px -2px #272927 inset;
+  /*background: rgba(187, 225, 255, 0.99);*/
+  height: calc(100% - 2px);
+}
+
+.keyboard .octave {
+  height: 100%;
+  flex: 1;
+  margin-left: -2px;
+  display: inline-block;
+  position: relative;
+}
+.keyboard .octave:first-child {
+  flex: 0.2857;
+}
+.keyboard .octave:last-child {
+  flex: 0.1428;
+}
+.keyboard .octave:first-child .black.key {
+  width: 25%;
+  left: 36.5%;
+}
+.keyboard .octave:first-child .white.key {
+  width: 50%;
+}
+.keyboard .octave:last-child .key {
+  width: 100%;
+}
+.keyboard .key.black {
+  width: 7.1%;
+  height: 61.8%;
+  background-color: #000;
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  position: absolute;
+  top: 0px;
+  z-index: 2;
+  border-radius: 0 0 3px 3px;
+  border-top: 0px;
+  box-shadow: 0 -9px 10px 9px #303030 inset, 0 -15px #f7f7f7 inset;
+}
+.keyboard .key.black.pressed {
+  border: 1px solid #8d5ffb;
+  border-top: 1px solid #7351fb;
+  box-shadow: 0 0 1px 2px #6324f9 inset, 0 -5px #9037f1 inset;
+}
+
+.octave .black:nth-child(2) {
+  left: 10.5%;
+}
+.octave .black:nth-child(4) {
+  left: 24.85%;
+}
+.octave .black:nth-child(7) {
+  left: 53.25%;
+}
+.octave .black:nth-child(9) {
+  left: 67.45%;
+}
+.octave .black:nth-child(11) {
+  left: 81.65%;
+}

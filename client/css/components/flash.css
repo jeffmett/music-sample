@@ -1,0 +1,71 @@
+#app-flash {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  border: 1px solid;
+  padding: 0.25em;
+  width: fit-content;
+  border-radius: 5px;
+  display: flex;
+  transition: 0.5s;
+  margin: 0.5em 0.25em;
+}
+
+#app-flash.idle {
+  opacity: 0;
+  pointer-events: none;
+  background-color: transparent;
+  border-color: transparent;
+}
+#app-flash.saving {
+  background-color: inherit;
+  border-color: transparent;
+}
+#app-flash.idle .nix,
+#app-flash.saving .nix {
+  opacity: 0;
+  pointer-events: none;
+}
+#app-flash.success {
+  background-color: rgba(0, 136, 0, 0.15);
+  color: #080;
+}
+#app-flash.fail {
+  background-color: rgba(136, 0, 0, 0.15);
+  color: #800;
+}
+
+#app-flash .msg {
+  margin-right: 1em;
+  flex: 1;
+}
+
+#app-flash .msg:before {
+  font-family: icon;
+  vertical-align: middle;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  margin: 0 0.25em;
+  border: 2px solid transparent;
+  content: '';
+}
+#app-flash.saving .msg:before {
+  border-color: #ddd;
+  border-left-color: #555;
+  animation: 1s spin infinite linear;
+}
+
+#app-flash.saving .msg:after {
+  content: '...';
+}
+#app-flash.success .msg:before {
+  content: 'thumb_up';
+}
+#app-flash.fail .msg:before {
+  content: 'warning';
+}
+#app-flash .nix {
+  cursor: pointer;
+}

@@ -1,0 +1,156 @@
+/* position */
+.rel {position: relative}
+.abs {position: absolute}
+.sticky {position: sticky}
+.fixed {position: fixed}
+
+/* display */
+.block {display: block}
+.in-block {display: inline-block}
+.flex {display: flex}
+.inline {display: inline}
+
+/* flex */
+.flex.center {
+  justify-content: center;
+  align-items: center;
+}
+.flex.align-c {align-items: center}
+.flex.col {flex-direction: column}
+.flex.row {flex-direction: row}
+.flex.col-rev {flex-direction: column-reverse}
+.flex.row-rev {flex-direction: row-reverse}
+.flex.space-b {justify-content: space-between}
+.flex.space-a {justify-content: space-around}
+.flex.space-e {justify-content: space-evenly}
+
+.flex1 {
+  flex: 1;
+}
+
+
+/* padding */
+.pad {padding: var(--em, 0.25em 0.5em)}
+.pad-lr {padding: 0 var(--em-5, 0.5em)}
+.pad-lite {padding: var(--em-lite, 0.125em 0.25em)}
+.pad0 {padding: 0}
+.pad1 {padding: 1em;}
+
+/* margin */
+.m0 {margin: 0}
+.mt0, .mtb0 {margin-top: 0}
+.mb0, .mtb0 {margin-bottom: 0}
+.mt1, .m1 {margin-top: 1em}
+.mb1, .m1 {margin-bottom: 1em}
+.ml1, .mlr1, .m1 {margin-left: 1em}
+.mr1, .mlr1, .m1 {margin-right: 1em}
+.mt-25, .m-25 {margin-top: 0.25em}
+.mb-25, .m-25 {margin-bottom: 0.25em}
+.mt-5, .m-5 {margin-top: 0.5em}
+.mb-5, .m-5 {margin-bottom: 0.5em}
+.ml-5, .mlr-5, .m-5 {margin-left: 0.5em}
+.mr-5, .mlr-5, .m-5 {margin-right: 0.5em}
+.mauto {margin: auto}
+
+/* cursor */
+.pointer {cursor: pointer}
+.def {cursor: default}
+.no-go {cursor: not-allowed}
+.wait {cursor: wait}
+
+/* sizing */
+.h100 {height: 100%;}
+.w100 {width: 100%}
+.w33 {width: 33.33%}
+
+
+/* text */
+.f125 {font-size: 1.125em}
+.f25 {font-size: 1.25em}
+.f45 {font-size: 1.45em}
+.f5 {font-size: 1.5em}
+.f1 {font-size: 1em}
+.f-125 {font-size: 0.125em}
+.f-25 {font-size: 0.25em}
+.f-5 {font-size: 0.5em}
+.f-75 {font-size: 0.75em}
+.f-85 {font-size: 0.85em}
+.fw1 {font-weight: 100;}
+.fw3 {font-weight: 300}
+.fw5 {font-weight: 500}
+.fw7 {font-weight: 700}
+.fw9 {font-weight: 900}
+
+.txt-c {text-align: center}
+.txt-l {text-align: left}
+.txt-r {text-align: right}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* color */
+.c-dim {
+  color: var(--dim, #ccc);
+}
+
+/* borders */
+.border {border: var(--border)}
+.border-l {border-left: var(--border)}
+.border-r {border-right: var(--border)}
+.border-t {border-top: var(--border)}
+.border-b {border-bottom: var(--border)}
+.b-radius3 {border-radius: 3px}
+.b-radius5 {border-radius: 5px}
+.border-tb {
+  border: var(--border);
+  border-left: none;
+  border-right: none;
+}
+.border-lr {
+  border: var(--border);
+  border-top: none;
+  border-bottom: none;
+}
+
+/* hiding todo fading & other fanciness */
+.hidden {display: none}
+.invisible {visibility: hidden}
+
+.no-select {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* hover only */
+.hover-only {
+  visibility: hidden;
+}
+:hover > .hover-only {
+  visibility: visible;
+}
+
+/* todo rethink */
+.ez-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* God forsaken floats, shame on me */
+.f-left {
+  float: left;
+}
+.f-right {
+  float: right;
+}
+
+
+/* text transforms */
+.capitalize { text-transform: capitalize}
+.uppercase { text-transform: uppercase}
+.lowercase { text-transform: lowercase}

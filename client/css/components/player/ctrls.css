@@ -1,0 +1,37 @@
+#player-ctrls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 125px;
+  margin: 0.5em;
+}
+
+#play-toggle {
+  display: inline-flex;
+  position: relative;
+  font-size: 1.25em;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  border: 2px solid #555;
+}
+
+#play-toggle:after {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+#play-toggle.loading:after {
+  border: 2px solid #ccc;
+  border-left-color: #555;
+  border-right-color: #555;
+  animation: 1s spin infinite linear;
+}
